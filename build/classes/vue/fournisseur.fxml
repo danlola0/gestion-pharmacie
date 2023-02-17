@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="633.0" prefWidth="1011.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FournisseurController">
+   <children>
+      <StackPane fx:id="root" prefHeight="633.0" prefWidth="1011.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="212.0" layoutY="14.0" prefHeight="45.0" prefWidth="616.0" text="Liste des Fournisseur Disponnible">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="69.0" prefHeight="0.0" prefWidth="1011.0" />
+                  <TableView fx:id="table" layoutX="14.0" layoutY="79.0" prefHeight="522.0" prefWidth="776.0">
+                     <columns>
+                        <TableColumn fx:id="colnum" prefWidth="160.0" text="N°" />
+                        <TableColumn fx:id="colnom" prefWidth="257.0" text="nom" />
+                        <TableColumn fx:id="coladresse" prefWidth="208.0" text="adresse" />
+                        <TableColumn fx:id="colphone" prefWidth="149.0" text="téléphone" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnAdd" layoutX="803.0" layoutY="400.0" onAction="#onAdd" prefHeight="31.0" prefWidth="151.0" style="-fx-border-color: black; -fx-border-radius: 50;" text="Ajouter">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMod" layoutX="803.0" layoutY="459.0" onAction="#onModifier" prefHeight="31.0" prefWidth="151.0" style="-fx-border-color: black; -fx-border-radius: 50;" text="Modifier">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDel" layoutX="803.0" layoutY="513.0" onAction="#onDelete" prefHeight="31.0" prefWidth="151.0" style="-fx-border-color: black; -fx-border-radius: 50;" text="Supprimer">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSearch" layoutX="931.0" layoutY="93.0" onAction="#onSearchttext" prefHeight="63.0" prefWidth="66.0" text=" ">
+                     <graphic>
+                        <ImageView fx:id="ireche" fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="trecherche" layoutX="796.0" layoutY="110.0" prefHeight="29.0" prefWidth="125.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+   <stylesheets>
+      <URL value="@/style/app.css" />
+   </stylesheets>
+</AnchorPane>

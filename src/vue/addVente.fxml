@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="633.0" prefWidth="1011.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.AddVenteController">
+    <stylesheets>
+        <URL value="@/style/app.css" />
+    </stylesheets>
+   <children>
+      <StackPane fx:id="root" layoutX="10.0" layoutY="10.0" prefHeight="633.0" prefWidth="1011.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Separator layoutY="63.0" prefHeight="0.0" prefWidth="1011.0" />
+                  <Label alignment="CENTER" layoutX="190.0" layoutY="14.0" prefHeight="45.0" prefWidth="616.0" text="Nouvelle Vente">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="t_nom_client" layoutX="257.0" layoutY="87.0" prefHeight="21.0" prefWidth="241.0" />
+                  <TextField fx:id="t_telephone" layoutX="257.0" layoutY="140.0" prefHeight="31.0" prefWidth="241.0" />
+                  <TextField fx:id="t_qte" layoutX="251.0" layoutY="345.0" prefHeight="31.0" prefWidth="241.0" />
+                  <JFXButton fx:id="btnSave" layoutX="319.0" layoutY="420.0" onAction="#onSave" prefHeight="56.0" prefWidth="130.0" style="-fx-border-radius: 50; -fx-border-color: black;" text="Enregistrer">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="167.0" layoutY="92.0" text="Nom client" />
+                  <Label layoutX="167.0" layoutY="145.0" text="Telephone" />
+                  <Label layoutX="161.0" layoutY="202.0" text="Medicament" />
+                  <JFXButton layoutX="14.0" layoutY="14.0" onAction="#onClose" prefHeight="45.0" prefWidth="66.0" text=" ">
+                     <graphic>
+                        <ImageView fx:id="iclose" fitHeight="37.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXComboBox fx:id="cmb_medic" layoutX="263.0" layoutY="197.0" prefHeight="31.0" prefWidth="241.0" />
+                  <JFXComboBox fx:id="cmb_fourn" layoutX="257.0" layoutY="269.0" prefHeight="31.0" prefWidth="241.0" />
+                  <Label layoutX="161.0" layoutY="274.0" text="Fournisseur" />
+                  <Label layoutX="161.0" layoutY="350.0" text="Quantité" />
+                  <JFXButton layoutX="14.0" layoutY="60.0" onAction="#onClose" prefHeight="85.0" prefWidth="95.0" text=" ">
+                     <graphic>
+                        <ImageView fx:id="iclose" fitHeight="59.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <Pane fx:id="pane" layoutX="549.0" layoutY="81.0" prefHeight="463.0" prefWidth="450.0" style="-fx-border-color: black;">
+                     <children>
+                        <ImageView fx:id="ifacture" fitHeight="453.0" fitWidth="430.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="lfournisseur" layoutX="135.0" layoutY="193.0" prefHeight="21.0" prefWidth="285.0" />
+                        <Label fx:id="lpu" layoutX="135.0" layoutY="328.0" prefHeight="21.0" prefWidth="285.0" />
+                        <Label fx:id="lqte" layoutX="135.0" layoutY="279.0" prefHeight="21.0" prefWidth="285.0" />
+                        <Label fx:id="lcontact" layoutX="135.0" layoutY="147.0" prefHeight="21.0" prefWidth="285.0" />
+                        <Label fx:id="lproduit" layoutX="135.0" layoutY="235.0" prefHeight="21.0" prefWidth="285.0" />
+                        <Label fx:id="lnom" layoutX="135.0" layoutY="105.0" prefHeight="21.0" prefWidth="285.0" />
+                        <Label fx:id="lpt" layoutX="135.0" layoutY="377.0" prefHeight="21.0" prefWidth="285.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
